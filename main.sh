@@ -11,7 +11,7 @@ if [[ $(which grype 2>/dev/null | wc -l) == 0 ]]
 then
     curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /bin
 else
-    echo "grype is already installed, skiping"
+    echo "grype is already installed, skipping"
     echo ""
 fi
 
@@ -19,7 +19,7 @@ if [[ $(which syft 2>/dev/null | wc -l) == 0 ]]
 then
     curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /bin
 else
-    echo "syft is already installed, skiping"
+    echo "syft is already installed, skipping"
     echo ""
 fi
 
@@ -27,5 +27,5 @@ syft -q dir:/ -o json > ./wholesystem-package-scan-$(date +%Y-%m-%d).json
 grype -q sbom:./wholesystem-package-scan-$(date +%Y-%m-%d).json | grep -i log4j | tee $(hostname)-vuln_output-$(date +%Y-%m-%d).txt
 echo ""
 
-echo "All done! Checkout the $(hostname)-vuln_output-$(date +%Y-%m-%d).txt file, and save it as a report"
+echo "All done! Checkout the $(hostname)_vuln_output-$(date +%Y-%m-%d).txt file, and save it as a report"
 echo ""

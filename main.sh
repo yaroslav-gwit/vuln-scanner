@@ -24,7 +24,7 @@ else
 fi
 
 syft -q dir:/ -o json > ./wholesystem-package-scan-$(date +%Y-%m-%d).json
-grype -q sbom:./wholesystem-package-scan-$(date +%Y-%m-%d).json | grep -i log4j | tee $(hostname)-vuln_output-$(date +%Y-%m-%d).txt
+grype -q sbom:./wholesystem-package-scan-$(date +%Y-%m-%d).json | grep -i log4j | tee $(hostname)_vuln_output-$(date +%Y-%m-%d).txt
 echo ""
 
 echo "All done! Checkout the $(hostname)_vuln_output-$(date +%Y-%m-%d).txt file, and save it as a report"

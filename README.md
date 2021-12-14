@@ -11,3 +11,12 @@ sudo su -
 curl -s https://raw.githubusercontent.com/yaroslav-gwit/vuln-scanner/main/main.sh | bash -x
 ```
 if you'd like to see the debugging info from bash
+## You can also run this check in the background using `tmux`
+To create a new session:
+```
+tmux
+```
+To re-connect to existing session:
+```
+tmux a
+```

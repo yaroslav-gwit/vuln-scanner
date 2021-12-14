@@ -1,4 +1,5 @@
-# vuln-scanner
+# Server vulnerability scanner
+This is a simple `bash` script that utilises `syft` and `grype` to check for vulnerabilities on a given server.
 ## Make sure you are running as root!
 ```
 sudo su -

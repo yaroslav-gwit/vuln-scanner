@@ -32,6 +32,8 @@ echo "Host: $(hostname)" > $(hostname)_vuln_output-$(date +%Y-%m-%d).txt
 echo "" >> $(hostname)_vuln_output-$(date +%Y-%m-%d).txt
 echo "List of vulnerabilities found:" >> $(hostname)_vuln_output-$(date +%Y-%m-%d).txt
 grype -q sbom:./wholesystem-package-scan-$(date +%Y-%m-%d).json | grep -i log4j | tee -a $(hostname)_vuln_output-$(date +%Y-%m-%d).txt
+echo "" >> $(hostname)_vuln_output-$(date +%Y-%m-%d).txt
+echo "" >> $(hostname)_vuln_output-$(date +%Y-%m-%d).txt
 echo ""
 
 

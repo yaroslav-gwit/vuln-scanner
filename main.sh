@@ -23,5 +23,5 @@ else
     echo ""
 fi
 
-syft dir:/ -o json > ./wholesystem-$(date +%Y-%m-%d).json > /dev/null
+syft dir:/ -o json > ./wholesystem-$(date +%Y-%m-%d).json 2> /dev/null
 grype sbom:./wholesystem-$(date +%Y-%m-%d).json | grep -i log4j | tee vuln_output-$(date +%Y-%m-%d).txt

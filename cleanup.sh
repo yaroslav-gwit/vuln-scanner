@@ -22,6 +22,7 @@ then
     echo "found grype cached DB, removing"
     rm -rf ~/.cache/grype/db/3/
     echo "found grype cached DB, removing: DONE"
+    echo ""
 fi
 
 

@@ -11,3 +11,13 @@ sudo su -
 curl -s https://raw.githubusercontent.com/yaroslav-gwit/vuln-scanner/main/main.sh | bash -x
 ```
 if you'd like to see the debugging info from bash
+## I recommend running this check in the background using `tmux`, because if your SSH session drops, you will have to start all over again
+```
+sudo su -
+tmux
+curl -s https://raw.githubusercontent.com/yaroslav-gwit/vuln-scanner/main/main.sh | bash
+```
+To re-connect to existing session:
+```
+tmux a
+```

@@ -21,3 +21,9 @@ To re-connect to existing session:
 ```
 tmux a
 ```
+## To remove `grype`, `syft` and clean up your system, execute the command below:
+```
+# Become root, if you are not
+sudo su -
+curl -s https://raw.githubusercontent.com/yaroslav-gwit/vuln-scanner/main/cleanup.sh | bash
+```

@@ -38,7 +38,7 @@ else
 fi
 
 
-if [[ $(which grype 2>/dev/null | wc -l) != 0 ]] || [[ $(which syft 2>/dev/null | wc -l) != 0 ]] || [[ -d ~/.cache/grype/db/3/ ]]
+if [[ $(which grype 2>/dev/null | wc -l) == 0 ]] || [[ $(which syft 2>/dev/null | wc -l) == 0 ]] || [[ ! -d ~/.cache/grype/db/3/ ]]
 then
     echo "We are done cleaning up."
 else

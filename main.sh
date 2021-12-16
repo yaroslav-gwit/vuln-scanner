@@ -45,7 +45,7 @@ done
 
 
 #_ CHECK INDEXED LIBRARIES FOR VULNERABILITIES _#
-RESULTS_FILENAME=$(hostname)_vuln_output-$(date +%Y-%m-%d).txt
+RESULTS_FILENAME=vuln_output_$(date +%Y-%m-%d)_$(hostname).txt
 echo "Host: $(hostname)" > ${RESULTS_FILENAME}
 echo "" >> ${RESULTS_FILENAME}
 echo "List of vulnerabilities found:" >> ${RESULTS_FILENAME}

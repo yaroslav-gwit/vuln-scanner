@@ -53,8 +53,8 @@ echo "List of vulnerabilities found:" >> ${RESULTS_FILENAME}
 JSONS_TO_SCAN=$(ls *_packagescan_* | grep -v ".OLD")
 for JSON in $JSONS_TO_SCAN
 do
-    echo ""
-    echo "File scanned: ${JSON}">> ${RESULTS_FILENAME}
+    echo "" >> ${RESULTS_FILENAME}
+    echo "File scanned: ${JSON}" >> ${RESULTS_FILENAME}
     grype -q sbom:./${JSON} | grep -i log4j | tee -a ${RESULTS_FILENAME}
 done
 

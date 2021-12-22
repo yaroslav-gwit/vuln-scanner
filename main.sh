@@ -29,7 +29,7 @@ fi
 
 
 #_ RENAME SYFT INDEXING RESULT FILES TO OLD, SO THAT THE VULNERABILITY REPORT WILL BE UP TO DATE _#
-for JSON_RESULT in $(ls *_packagescan_* 2> /dev/null || true)
+for JSON_RESULT in $(ls *_packagescan_* 2>/dev/null | grep -v .OLD  || true)
 do
     if [[ -f ${JSON_RESULT} ]]; then mv ${JSON_RESULT} ${JSON_RESULT}.OLD; fi
 done

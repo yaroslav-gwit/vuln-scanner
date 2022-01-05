@@ -56,7 +56,7 @@ do
     echo "" >> ${RESULTS_FILENAME}
     echo "File scanned: ${JSON}" >> ${RESULTS_FILENAME}
     grype -q sbom:./${JSON} | grep -i log4j | tee -a ${RESULTS_FILENAME}
-    echo "File locations:"
+    echo "Binary locations:"
     cat ${JSON} | grep -i log4j | grep -i path | tee -a ${RESULTS_FILENAME}
     echo ""
 done

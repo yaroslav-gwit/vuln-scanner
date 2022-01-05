@@ -41,6 +41,7 @@ for DIR in $DIRS_TO_SCAN
 do
     SYFT_FILE_NAME=${DIR}_packagescan_$(date +%Y-%m-%d).json
     syft -q dir:/${DIR} -o json > ./${SYFT_FILE_NAME}
+    echo "The ${DIR} directory indexing is finished"
 done
 
 
